@@ -164,17 +164,31 @@ namespace SimiSoft
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
+            if (txtPrecio.Text.Contains(","))
             {
-                e.Handled = false;
-            }
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
+                if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+                {
+                    e.Handled = true;
+                    return;
+                }
             }
             else
             {
-                e.Handled = true;
+                if (string.IsNullOrEmpty(txtPrecio.Text))
+                {
+                    if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+                    {
+                        e.Handled = true;
+                        return;
+                    }
+                }
+                else
+                {
+                    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+                    {
+                        e.Handled = true;
+                    }
+                }
             }
         }
 

@@ -154,6 +154,7 @@ namespace SimiSoft
             this.txtCodigo.Location = new System.Drawing.Point(216, 275);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(6);
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Properties.MaxLength = 50;
             this.txtCodigo.Size = new System.Drawing.Size(200, 40);
             this.txtCodigo.TabIndex = 3;
             // 
@@ -171,6 +172,7 @@ namespace SimiSoft
             this.txtPrecio.Location = new System.Drawing.Point(216, 358);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(6);
             this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Properties.MaxLength = 7;
             this.txtPrecio.Size = new System.Drawing.Size(200, 40);
             this.txtPrecio.TabIndex = 4;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
@@ -180,6 +182,7 @@ namespace SimiSoft
             this.txtMarca.Location = new System.Drawing.Point(216, 538);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(6);
             this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Properties.MaxLength = 100;
             this.txtMarca.Size = new System.Drawing.Size(200, 40);
             this.txtMarca.TabIndex = 6;
             // 
@@ -188,6 +191,7 @@ namespace SimiSoft
             this.txtUnidad.Location = new System.Drawing.Point(216, 188);
             this.txtUnidad.Margin = new System.Windows.Forms.Padding(6);
             this.txtUnidad.Name = "txtUnidad";
+            this.txtUnidad.Properties.MaxLength = 50;
             this.txtUnidad.Size = new System.Drawing.Size(200, 40);
             this.txtUnidad.TabIndex = 2;
             // 
@@ -196,6 +200,7 @@ namespace SimiSoft
             this.txtDescripcion.Location = new System.Drawing.Point(216, 108);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(6);
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Properties.MaxLength = 150;
             this.txtDescripcion.Size = new System.Drawing.Size(200, 40);
             this.txtDescripcion.TabIndex = 1;
             // 

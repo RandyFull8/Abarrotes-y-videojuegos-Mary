@@ -60,7 +60,7 @@ namespace SimiSoft
             this.lblUsuario.ImageOptions.Image = global::SimiSoft.Properties.Resources.icons8_gender_neutral_user_32;
             this.lblUsuario.LineColor = System.Drawing.Color.White;
             this.lblUsuario.Location = new System.Drawing.Point(26, 33);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(6);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(130, 36);
             this.lblUsuario.TabIndex = 1;
@@ -70,7 +70,7 @@ namespace SimiSoft
             // 
             this.txtUsuario.EditValue = "";
             this.txtUsuario.Location = new System.Drawing.Point(254, 31);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(260, 40);
             this.txtUsuario.TabIndex = 0;
@@ -82,7 +82,7 @@ namespace SimiSoft
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(254, 111);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(260, 40);
@@ -99,7 +99,7 @@ namespace SimiSoft
             this.lblPassword.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.lblPassword.ImageOptions.Image = global::SimiSoft.Properties.Resources.icons8_password_32;
             this.lblPassword.Location = new System.Drawing.Point(26, 113);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(6);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(171, 36);
             this.lblPassword.TabIndex = 4;
@@ -119,7 +119,7 @@ namespace SimiSoft
             this.btnIngresar.Image = global::SimiSoft.Properties.Resources.icons8_ok_16;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIngresar.Location = new System.Drawing.Point(65, 225);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(6);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(180, 44);
             this.btnIngresar.TabIndex = 2;
@@ -133,7 +133,7 @@ namespace SimiSoft
             this.btnCancelar.Image = global::SimiSoft.Properties.Resources.icons8_cancel_16;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(309, 225);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(180, 44);
             this.btnCancelar.TabIndex = 3;
@@ -165,7 +165,7 @@ namespace SimiSoft
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IconOptions.Image = global::SimiSoft.Properties.Resources.icons8_form_32;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";

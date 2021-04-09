@@ -130,6 +130,7 @@ namespace SimiSoft
             this.txtTelefono.Location = new System.Drawing.Point(232, 263);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(6);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Properties.MaxLength = 20;
             this.txtTelefono.Size = new System.Drawing.Size(200, 40);
             this.txtTelefono.TabIndex = 3;
             // 
@@ -138,6 +139,7 @@ namespace SimiSoft
             this.txtDescuento.Location = new System.Drawing.Point(232, 354);
             this.txtDescuento.Margin = new System.Windows.Forms.Padding(6);
             this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Properties.MaxLength = 2;
             this.txtDescuento.Size = new System.Drawing.Size(200, 40);
             this.txtDescuento.TabIndex = 4;
             this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
@@ -147,6 +149,7 @@ namespace SimiSoft
             this.txtRazon.Location = new System.Drawing.Point(232, 177);
             this.txtRazon.Margin = new System.Windows.Forms.Padding(6);
             this.txtRazon.Name = "txtRazon";
+            this.txtRazon.Properties.MaxLength = 100;
             this.txtRazon.Size = new System.Drawing.Size(200, 40);
             this.txtRazon.TabIndex = 2;
             // 
@@ -155,6 +158,7 @@ namespace SimiSoft
             this.txtNombre.Location = new System.Drawing.Point(232, 96);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Properties.MaxLength = 50;
             this.txtNombre.Size = new System.Drawing.Size(200, 40);
             this.txtNombre.TabIndex = 1;
             // 
