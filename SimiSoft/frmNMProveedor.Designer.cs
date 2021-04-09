@@ -100,6 +100,7 @@ namespace SimiSoft
             this.txtNombre.Location = new System.Drawing.Point(222, 96);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Properties.MaxLength = 100;
             this.txtNombre.Size = new System.Drawing.Size(200, 40);
             this.txtNombre.TabIndex = 1;
             // 
@@ -108,6 +109,7 @@ namespace SimiSoft
             this.txtTelefono.Location = new System.Drawing.Point(222, 233);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(6);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Properties.MaxLength = 20;
             this.txtTelefono.Size = new System.Drawing.Size(200, 40);
             this.txtTelefono.TabIndex = 3;
             // 
@@ -125,6 +127,7 @@ namespace SimiSoft
             this.txtEmpresa.Location = new System.Drawing.Point(222, 165);
             this.txtEmpresa.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmpresa.Name = "txtEmpresa";
+            this.txtEmpresa.Properties.MaxLength = 40;
             this.txtEmpresa.Size = new System.Drawing.Size(200, 40);
             this.txtEmpresa.TabIndex = 2;
             // 
