@@ -45,6 +45,8 @@ namespace SimiSoft
             this.txtMarca = new DevExpress.XtraEditors.TextEdit();
             this.txtUnidad = new DevExpress.XtraEditors.TextEdit();
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblBandera = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).BeginInit();
@@ -163,6 +165,7 @@ namespace SimiSoft
             this.txtStock.Location = new System.Drawing.Point(216, 446);
             this.txtStock.Margin = new System.Windows.Forms.Padding(6);
             this.txtStock.Name = "txtStock";
+            this.txtStock.Properties.MaxLength = 4;
             this.txtStock.Size = new System.Drawing.Size(200, 40);
             this.txtStock.TabIndex = 5;
             this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
@@ -204,6 +207,23 @@ namespace SimiSoft
             this.txtDescripcion.Size = new System.Drawing.Size(200, 40);
             this.txtDescripcion.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "label1";
+            // 
+            // lblBandera
+            // 
+            this.lblBandera.AutoSize = true;
+            this.lblBandera.Location = new System.Drawing.Point(666, 502);
+            this.lblBandera.Name = "lblBandera";
+            this.lblBandera.Size = new System.Drawing.Size(0, 25);
+            this.lblBandera.TabIndex = 14;
+            // 
             // frmNMProducto
             // 
             this.AcceptButton = this.btnGuardar;
@@ -211,6 +231,8 @@ namespace SimiSoft
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(840, 619);
+            this.Controls.Add(this.lblBandera);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtUnidad);
             this.Controls.Add(this.txtMarca);
@@ -265,5 +287,7 @@ namespace SimiSoft
         private DevExpress.XtraEditors.TextEdit txtMarca;
         private DevExpress.XtraEditors.TextEdit txtUnidad;
         private DevExpress.XtraEditors.TextEdit txtDescripcion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblBandera;
     }
 }
