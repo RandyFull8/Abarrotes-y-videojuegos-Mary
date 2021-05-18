@@ -139,10 +139,13 @@ namespace SimiSoft
             this.txtDescuento.Location = new System.Drawing.Point(232, 354);
             this.txtDescuento.Margin = new System.Windows.Forms.Padding(6);
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Properties.MaxLength = 2;
+            this.txtDescuento.Properties.DisplayFormat.FormatString = "p";
+            this.txtDescuento.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtDescuento.Properties.Mask.EditMask = "p";
+            this.txtDescuento.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDescuento.Properties.MaxLength = 5;
             this.txtDescuento.Size = new System.Drawing.Size(200, 40);
             this.txtDescuento.TabIndex = 4;
-            this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
             // 
             // txtRazon
             // 
@@ -188,6 +191,7 @@ namespace SimiSoft
             this.Name = "frmNMCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMCliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNMCliente_FormClosing);
             this.Load += new System.EventHandler(this.frmNMCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();

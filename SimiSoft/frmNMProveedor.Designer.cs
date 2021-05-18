@@ -164,6 +164,7 @@ namespace SimiSoft
             this.Name = "frmNMProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMProveedor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNMProveedor_FormClosing);
             this.Load += new System.EventHandler(this.frmNMProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();

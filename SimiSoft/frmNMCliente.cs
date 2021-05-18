@@ -45,6 +45,7 @@ namespace SimiSoft
         {
             if (Validar())
             {
+               // XtraMessageBox.Show(txtDescuento.Text);
                 if (cliente == null)
                 {
                     if (new Cliente
@@ -52,12 +53,14 @@ namespace SimiSoft
                         nombre = txtNombre.Text,
                         razonSocial = txtRazon.Text,
                         telefono = txtTelefono.Text,
-                        descuento = Convert.ToDecimal(txtDescuento.Text),
+                        descuento = Convert.ToDecimal(txtDescuento.EditValue),
                     }.Add() > 0)
                     {
                         XtraMessageBox.Show("Cliente insertado correctamente", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        mark2 = 1;
                         this.Close();
+                        
                     }
                     else
                     {
@@ -76,7 +79,9 @@ namespace SimiSoft
                     {
                         XtraMessageBox.Show("Cliente modificado correctamente", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        mark2 = 2;
                         this.Close();
+                        
                     }
                     else
                     {
@@ -135,19 +140,25 @@ namespace SimiSoft
             return !ban;
         }
 
-        private void txtDescuento_KeyPress(object sender, KeyPressEventArgs e)
+        int mark2 = 0;
+        Boolean valuecase = false;
+        private void frmNMCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
+            if (mark2 == 1)
             {
-                e.Handled = false;
+                valuecase = true;
             }
-            else if (char.IsControl(e.KeyChar))
+            if(mark2 == 2)
             {
-                e.Handled = false;
+                valuecase = true;
             }
-            else
+            if(valuecase==false)
             {
-                e.Handled = true;
+                DialogResult dialogo2 = MessageBox.Show("¿Seguro que deseas cancelar el llenado de cliente?",
+              "Abarrotes y videojuegos Mary - 2021", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogo2 == DialogResult.Yes) { }
+                else { e.Cancel = true; }
+               
             }
         }
     }

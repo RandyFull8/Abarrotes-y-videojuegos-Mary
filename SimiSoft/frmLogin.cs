@@ -25,7 +25,7 @@ namespace SimiSoft
         {
             //
         }
-
+        Boolean mark = true;
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             if (Validar())
@@ -37,6 +37,7 @@ namespace SimiSoft
                 }.Login()!= null)
                 {
                     //XtraMessageBox.Show("Acceso correcto");
+                    mark = false;
                     frmBienvenida frmBienvenida = new frmBienvenida();
                     frmBienvenida.ShowDialog();
                     DialogResult = DialogResult.OK;
@@ -44,6 +45,10 @@ namespace SimiSoft
                 else
                 {
                     XtraMessageBox.Show("Error en las credenciales");
+
+                    txtPassword.Text = "";
+                    txtUsuario.Text = "";
+                    txtUsuario.Focus();
                 }
             }
 
@@ -105,6 +110,21 @@ namespace SimiSoft
         private void txtUsuario_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (mark == false)
+            {
+                //nada
+            }
+            else
+            {
+                DialogResult dialogo = MessageBox.Show("¿Desea salir de la aplicación?",
+               "Abarrotes y videojuegos Mary - 2021", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.OK) { }
+                else { e.Cancel = true; }
+            }
         }
     }
 }

@@ -30,6 +30,7 @@ namespace SimiSoft
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnActualizar = new DevExpress.XtraBars.BarButtonItem();
@@ -79,15 +80,17 @@ namespace SimiSoft
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnActualizar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnNuevo),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnModificar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnNuevo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnModificar, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEliminar, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.Text = "Herramientas";
             // 
             // btnActualizar
             // 
             this.btnActualizar.Caption = "Actualizar";
             this.btnActualizar.Id = 0;
+            this.btnActualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnActualizar.ImageOptions.SvgImage")));
+            this.btnActualizar.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizar_ItemClick);
             // 
@@ -95,6 +98,8 @@ namespace SimiSoft
             // 
             this.btnNuevo.Caption = "Nuevo";
             this.btnNuevo.Id = 1;
+            this.btnNuevo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNuevo.ImageOptions.SvgImage")));
+            this.btnNuevo.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevo_ItemClick);
             // 
@@ -102,6 +107,8 @@ namespace SimiSoft
             // 
             this.btnModificar.Caption = "Modificar";
             this.btnModificar.Id = 2;
+            this.btnModificar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnModificar.ImageOptions.SvgImage")));
+            this.btnModificar.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnModificar_ItemClick);
             // 
@@ -109,6 +116,8 @@ namespace SimiSoft
             // 
             this.btnEliminar.Caption = "Eliminar";
             this.btnEliminar.Id = 3;
+            this.btnEliminar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEliminar.ImageOptions.SvgImage")));
+            this.btnEliminar.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminar_ItemClick);
             // 
@@ -118,13 +127,13 @@ namespace SimiSoft
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(643, 20);
+            this.barDockControlTop.Size = new System.Drawing.Size(643, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 426);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 393);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(643, 0);
             // 
@@ -132,17 +141,17 @@ namespace SimiSoft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 406);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 369);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(643, 20);
+            this.barDockControlRight.Location = new System.Drawing.Point(643, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 406);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 369);
             // 
             // clienteBindingSource
             // 
@@ -152,11 +161,11 @@ namespace SimiSoft
             // 
             this.gcClientes.DataSource = this.clienteBindingSource;
             this.gcClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcClientes.Location = new System.Drawing.Point(0, 20);
+            this.gcClientes.Location = new System.Drawing.Point(0, 24);
             this.gcClientes.MainView = this.gvClientes;
             this.gcClientes.MenuManager = this.barManager1;
             this.gcClientes.Name = "gcClientes";
-            this.gcClientes.Size = new System.Drawing.Size(643, 406);
+            this.gcClientes.Size = new System.Drawing.Size(643, 369);
             this.gcClientes.TabIndex = 9;
             this.gcClientes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvClientes});
@@ -171,18 +180,24 @@ namespace SimiSoft
             this.coldescuento,
             this.colactivo});
             this.gvClientes.GridControl = this.gcClientes;
+            this.gvClientes.LevelIndent = 0;
             this.gvClientes.Name = "gvClientes";
             this.gvClientes.OptionsBehavior.Editable = false;
             this.gvClientes.OptionsView.ColumnAutoWidth = false;
             this.gvClientes.OptionsView.EnableAppearanceEvenRow = true;
             this.gvClientes.OptionsView.ShowAutoFilterRow = true;
             this.gvClientes.OptionsView.ShowGroupPanel = false;
+            this.gvClientes.PreviewIndent = 0;
             // 
             // colidCliente
             // 
             this.colidCliente.Caption = "ID";
             this.colidCliente.FieldName = "idCliente";
             this.colidCliente.Name = "colidCliente";
+            this.colidCliente.OptionsColumn.AllowEdit = false;
+            this.colidCliente.OptionsColumn.AllowFocus = false;
+            this.colidCliente.OptionsColumn.AllowMove = false;
+            this.colidCliente.OptionsColumn.AllowSize = false;
             this.colidCliente.Visible = true;
             this.colidCliente.VisibleIndex = 0;
             // 
@@ -191,6 +206,11 @@ namespace SimiSoft
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.AllowEdit = false;
+            this.colnombre.OptionsColumn.AllowFocus = false;
+            this.colnombre.OptionsColumn.AllowMove = false;
+            this.colnombre.OptionsColumn.AllowShowHide = false;
+            this.colnombre.OptionsColumn.AllowSize = false;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
             // 
@@ -199,6 +219,12 @@ namespace SimiSoft
             this.colrazonSocial.Caption = "Razón Social";
             this.colrazonSocial.FieldName = "razonSocial";
             this.colrazonSocial.Name = "colrazonSocial";
+            this.colrazonSocial.OptionsColumn.AllowEdit = false;
+            this.colrazonSocial.OptionsColumn.AllowFocus = false;
+            this.colrazonSocial.OptionsColumn.AllowMove = false;
+            this.colrazonSocial.OptionsColumn.AllowShowHide = false;
+            this.colrazonSocial.OptionsColumn.AllowSize = false;
+            this.colrazonSocial.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colrazonSocial.Visible = true;
             this.colrazonSocial.VisibleIndex = 2;
             // 
@@ -207,14 +233,26 @@ namespace SimiSoft
             this.coltelefono.Caption = "Teléfono";
             this.coltelefono.FieldName = "telefono";
             this.coltelefono.Name = "coltelefono";
+            this.coltelefono.OptionsColumn.AllowEdit = false;
+            this.coltelefono.OptionsColumn.AllowFocus = false;
+            this.coltelefono.OptionsColumn.AllowMove = false;
+            this.coltelefono.OptionsColumn.AllowShowHide = false;
+            this.coltelefono.OptionsColumn.AllowSize = false;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 3;
             // 
             // coldescuento
             // 
             this.coldescuento.Caption = "Descuento";
+            this.coldescuento.DisplayFormat.FormatString = "p";
+            this.coldescuento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.coldescuento.FieldName = "descuento";
             this.coldescuento.Name = "coldescuento";
+            this.coldescuento.OptionsColumn.AllowEdit = false;
+            this.coldescuento.OptionsColumn.AllowFocus = false;
+            this.coldescuento.OptionsColumn.AllowMove = false;
+            this.coldescuento.OptionsColumn.AllowShowHide = false;
+            this.coldescuento.OptionsColumn.AllowSize = false;
             this.coldescuento.Visible = true;
             this.coldescuento.VisibleIndex = 4;
             // 
@@ -222,12 +260,16 @@ namespace SimiSoft
             // 
             this.colactivo.FieldName = "activo";
             this.colactivo.Name = "colactivo";
+            this.colactivo.OptionsColumn.AllowEdit = false;
+            this.colactivo.OptionsColumn.AllowFocus = false;
+            this.colactivo.OptionsColumn.AllowMove = false;
+            this.colactivo.OptionsColumn.AllowShowHide = false;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 426);
+            this.ClientSize = new System.Drawing.Size(643, 393);
             this.Controls.Add(this.gcClientes);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);

@@ -49,6 +49,7 @@ namespace SimiSoft
                     {
                         XtraMessageBox.Show("Proveedor insertado correctamente", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        mark2 = 1;
                         this.Close();
                     }
                     else
@@ -67,6 +68,7 @@ namespace SimiSoft
                     {
                         XtraMessageBox.Show("Proveedor modificado correctamente", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        mark2 = 2;
                         this.Close();
                     }
                     else
@@ -121,6 +123,27 @@ namespace SimiSoft
         private void frmNMProveedor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        int mark2 = 0;
+        Boolean valuecase = false;
+        private void frmNMProveedor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (mark2 == 1)
+            {
+                valuecase = true;
+            }
+            if (mark2 == 2)
+            {
+                valuecase = true;
+            }
+            if (valuecase == false)
+            {
+                DialogResult dialogo2 = MessageBox.Show("¿Seguro que deseas cancelar el llenado de cliente?",
+             "Abarrotes y videojuegos Mary - 2021", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogo2 == DialogResult.Yes) { }
+                else { e.Cancel = true; }
+            }
         }
     }
 }

@@ -62,12 +62,14 @@ namespace SimiSoft
                     {
                         XtraMessageBox.Show("Producto insertado correctamente", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        mark2 = 1;
                         this.Close();
                     }
                     else
                     {
                         XtraMessageBox.Show("Ocurrio un error en la inserción", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
+                        mark2 = 2;
                         this.Close();
                     }
                 }
@@ -161,10 +163,12 @@ namespace SimiSoft
 
             return !ban;
         }
-        string k;
+       
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtPrecio.Text.Contains(","))
+            string caracteresCount = Convert.ToString(txtPrecio.Text.Length);
+            int Valor = Convert.ToInt32(caracteresCount);
+            if (txtPrecio.Text.Contains("."))
             {
                 if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
                 {
@@ -184,12 +188,10 @@ namespace SimiSoft
                 }
                 else
                 {
-                    //val
-                    k = Convert.ToString(txtPrecio.Text.Length);
-                    int Valor = Convert.ToInt32(k);
+
                     if (Valor == 4)
                     {
-                        if (!char.IsControl(e.KeyChar) && e.KeyChar != ',')
+                        if (!char.IsControl(e.KeyChar) && e.KeyChar != '.')
                         {
                             e.Handled = true;
                         }
@@ -204,7 +206,7 @@ namespace SimiSoft
                     else
                     {
 
-                        if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+                        if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
                         {
                             e.Handled = true;
                         }
@@ -228,6 +230,27 @@ namespace SimiSoft
             else
             {
                 e.Handled = true;
+            }
+        }
+
+        int mark2 = 0;
+        Boolean valuecase = false;
+        private void frmNMProducto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (mark2 == 1)
+            {
+                valuecase = true;
+            }
+            if (mark2 == 2)
+            {
+                valuecase = true;
+            }
+            if (valuecase == false)
+            {
+                DialogResult dialogo2 = MessageBox.Show("¿Seguro que deseas cancelar el llenado de producto?",
+             "Abarrotes y videojuegos Mary - 2021", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogo2 == DialogResult.Yes) { }
+                else { e.Cancel = true; }
             }
         }
     }

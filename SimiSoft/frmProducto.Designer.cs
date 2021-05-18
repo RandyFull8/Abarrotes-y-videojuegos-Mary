@@ -30,6 +30,7 @@ namespace SimiSoft
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProducto));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnActualizar = new DevExpress.XtraBars.BarButtonItem();
@@ -81,9 +82,9 @@ namespace SimiSoft
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnActualizar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnNuevo),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnModificar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnNuevo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnModificar, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEliminar, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.DrawBorder = false;
             this.bar1.OptionsBar.DrawDragBorder = false;
             this.bar1.Text = "Herramientas";
@@ -92,6 +93,8 @@ namespace SimiSoft
             // 
             this.btnActualizar.Caption = "Actualizar";
             this.btnActualizar.Id = 0;
+            this.btnActualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnActualizar.ImageOptions.SvgImage")));
+            this.btnActualizar.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizar_ItemClick);
             // 
@@ -99,6 +102,8 @@ namespace SimiSoft
             // 
             this.btnNuevo.Caption = "Nuevo";
             this.btnNuevo.Id = 3;
+            this.btnNuevo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNuevo.ImageOptions.SvgImage")));
+            this.btnNuevo.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevo_ItemClick);
             // 
@@ -106,6 +111,8 @@ namespace SimiSoft
             // 
             this.btnModificar.Caption = "Modificar";
             this.btnModificar.Id = 2;
+            this.btnModificar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnModificar.ImageOptions.SvgImage")));
+            this.btnModificar.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnModificar_ItemClick);
             // 
@@ -113,6 +120,8 @@ namespace SimiSoft
             // 
             this.btnEliminar.Caption = "Eliminar";
             this.btnEliminar.Id = 1;
+            this.btnEliminar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEliminar.ImageOptions.SvgImage")));
+            this.btnEliminar.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminar_ItemClick);
             // 
@@ -122,7 +131,7 @@ namespace SimiSoft
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(674, 20);
+            this.barDockControlTop.Size = new System.Drawing.Size(674, 24);
             // 
             // barDockControlBottom
             // 
@@ -136,17 +145,17 @@ namespace SimiSoft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 418);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 414);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(674, 20);
+            this.barDockControlRight.Location = new System.Drawing.Point(674, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 418);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 414);
             // 
             // productoBindingSource
             // 
@@ -156,11 +165,11 @@ namespace SimiSoft
             // 
             this.gcProductos.DataSource = this.productoBindingSource;
             this.gcProductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcProductos.Location = new System.Drawing.Point(0, 20);
+            this.gcProductos.Location = new System.Drawing.Point(0, 24);
             this.gcProductos.MainView = this.gvProductos;
             this.gcProductos.MenuManager = this.barManager1;
             this.gcProductos.Name = "gcProductos";
-            this.gcProductos.Size = new System.Drawing.Size(674, 418);
+            this.gcProductos.Size = new System.Drawing.Size(674, 414);
             this.gcProductos.TabIndex = 9;
             this.gcProductos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProductos});
@@ -189,6 +198,10 @@ namespace SimiSoft
             this.colidProducto.Caption = "ID";
             this.colidProducto.FieldName = "idProducto";
             this.colidProducto.Name = "colidProducto";
+            this.colidProducto.OptionsColumn.AllowEdit = false;
+            this.colidProducto.OptionsColumn.AllowFocus = false;
+            this.colidProducto.OptionsColumn.AllowMove = false;
+            this.colidProducto.OptionsColumn.AllowSize = false;
             this.colidProducto.Visible = true;
             this.colidProducto.VisibleIndex = 0;
             // 
@@ -197,6 +210,10 @@ namespace SimiSoft
             this.coldescripcion.Caption = "Descripción";
             this.coldescripcion.FieldName = "descripcion";
             this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.OptionsColumn.AllowEdit = false;
+            this.coldescripcion.OptionsColumn.AllowFocus = false;
+            this.coldescripcion.OptionsColumn.AllowMove = false;
+            this.coldescripcion.OptionsColumn.AllowSize = false;
             this.coldescripcion.Visible = true;
             this.coldescripcion.VisibleIndex = 1;
             // 
@@ -205,6 +222,10 @@ namespace SimiSoft
             this.colunidadMedida.Caption = "UnidadMedida";
             this.colunidadMedida.FieldName = "unidadMedida";
             this.colunidadMedida.Name = "colunidadMedida";
+            this.colunidadMedida.OptionsColumn.AllowEdit = false;
+            this.colunidadMedida.OptionsColumn.AllowFocus = false;
+            this.colunidadMedida.OptionsColumn.AllowMove = false;
+            this.colunidadMedida.OptionsColumn.AllowSize = false;
             this.colunidadMedida.Visible = true;
             this.colunidadMedida.VisibleIndex = 2;
             // 
@@ -213,6 +234,10 @@ namespace SimiSoft
             this.colcodigo.Caption = "Código";
             this.colcodigo.FieldName = "codigo";
             this.colcodigo.Name = "colcodigo";
+            this.colcodigo.OptionsColumn.AllowEdit = false;
+            this.colcodigo.OptionsColumn.AllowFocus = false;
+            this.colcodigo.OptionsColumn.AllowMove = false;
+            this.colcodigo.OptionsColumn.AllowSize = false;
             this.colcodigo.Visible = true;
             this.colcodigo.VisibleIndex = 3;
             // 
@@ -221,6 +246,10 @@ namespace SimiSoft
             this.colprecio.Caption = "Precio";
             this.colprecio.FieldName = "precio";
             this.colprecio.Name = "colprecio";
+            this.colprecio.OptionsColumn.AllowEdit = false;
+            this.colprecio.OptionsColumn.AllowFocus = false;
+            this.colprecio.OptionsColumn.AllowMove = false;
+            this.colprecio.OptionsColumn.AllowSize = false;
             this.colprecio.Visible = true;
             this.colprecio.VisibleIndex = 4;
             // 
@@ -229,6 +258,10 @@ namespace SimiSoft
             this.colstock.Caption = "Stock";
             this.colstock.FieldName = "stock";
             this.colstock.Name = "colstock";
+            this.colstock.OptionsColumn.AllowEdit = false;
+            this.colstock.OptionsColumn.AllowFocus = false;
+            this.colstock.OptionsColumn.AllowMove = false;
+            this.colstock.OptionsColumn.AllowSize = false;
             this.colstock.Visible = true;
             this.colstock.VisibleIndex = 5;
             // 
@@ -237,6 +270,10 @@ namespace SimiSoft
             this.colmarca.Caption = "Marca";
             this.colmarca.FieldName = "marca";
             this.colmarca.Name = "colmarca";
+            this.colmarca.OptionsColumn.AllowEdit = false;
+            this.colmarca.OptionsColumn.AllowFocus = false;
+            this.colmarca.OptionsColumn.AllowMove = false;
+            this.colmarca.OptionsColumn.AllowSize = false;
             this.colmarca.Visible = true;
             this.colmarca.VisibleIndex = 6;
             // 

@@ -38,6 +38,8 @@ namespace SimiSoft
             this.btnProductos = new DevExpress.XtraBars.BarButtonItem();
             this.btnClientes = new DevExpress.XtraBars.BarButtonItem();
             this.btnProveedores = new DevExpress.XtraBars.BarButtonItem();
+            this.mnVentas = new DevExpress.XtraBars.BarSubItem();
+            this.btnAdminVentas = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -64,9 +66,11 @@ namespace SimiSoft
             this.mnCatalogos,
             this.btnProductos,
             this.btnClientes,
-            this.btnProveedores});
+            this.btnProveedores,
+            this.mnVentas,
+            this.btnAdminVentas});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 6;
+            this.barManager1.MaxItemId = 8;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -77,7 +81,8 @@ namespace SimiSoft
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.mnArchivo),
-            new DevExpress.XtraBars.LinkPersistInfo(this.mnCatalogos)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnCatalogos),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnVentas)});
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
@@ -130,6 +135,21 @@ namespace SimiSoft
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProveedores_ItemClick);
             // 
+            // mnVentas
+            // 
+            this.mnVentas.Caption = "Ventas";
+            this.mnVentas.Id = 6;
+            this.mnVentas.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAdminVentas)});
+            this.mnVentas.Name = "mnVentas";
+            // 
+            // btnAdminVentas
+            // 
+            this.btnAdminVentas.Caption = "Administrar";
+            this.btnAdminVentas.Id = 7;
+            this.btnAdminVentas.Name = "btnAdminVentas";
+            this.btnAdminVentas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdminVentas_ItemClick);
+            // 
             // bar3
             // 
             this.bar3.BarName = "Barra de estado";
@@ -148,35 +168,31 @@ namespace SimiSoft
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1324, 91);
+            this.barDockControlTop.Size = new System.Drawing.Size(662, 25);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 650);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 329);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1324, 23);
+            this.barDockControlBottom.Size = new System.Drawing.Size(662, 21);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 91);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 559);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 304);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1324, 91);
+            this.barDockControlRight.Location = new System.Drawing.Point(662, 25);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 559);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 304);
             // 
             // tabMdiManager
             // 
@@ -184,19 +200,20 @@ namespace SimiSoft
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 673);
+            this.ClientSize = new System.Drawing.Size(662, 350);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.IconOptions.Image = global::SimiSoft.Properties.Resources.icons8_shop_16;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmMain";
             this.Text = "Abarrotes y videojuegos Mary - 2021";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMdiManager)).EndInit();
             this.ResumeLayout(false);
@@ -220,6 +237,8 @@ namespace SimiSoft
         private DevExpress.XtraBars.BarButtonItem btnClientes;
         private DevExpress.XtraBars.BarButtonItem btnProveedores;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager tabMdiManager;
+        private DevExpress.XtraBars.BarSubItem mnVentas;
+        private DevExpress.XtraBars.BarButtonItem btnAdminVentas;
     }
 }
 

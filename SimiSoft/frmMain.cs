@@ -76,7 +76,42 @@ namespace SimiSoft
 
         private void btnExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             this.Close();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+              
+                DialogResult dialogo = MessageBox.Show("¿Seguro que desea salir del programa?",
+                          "Abarrotes y videojuegos Mary - 2021", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.OK) { }
+                else { e.Cancel = true; }          
+
+        }
+
+        private void btnAdminVentas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmVentas))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargando Ventas...");
+
+            new frmVentas() { MdiParent = this }.Show();
+
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
