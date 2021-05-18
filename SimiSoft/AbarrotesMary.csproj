@@ -186,9 +186,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Simisoft.Buins.Cliente.datasource" />
+    <None Include="Properties\DataSources\Simisoft.Buins.FormaPago.datasource" />
     <None Include="Properties\DataSources\Simisoft.Buins.Producto.datasource" />
     <None Include="Properties\DataSources\Simisoft.Buins.Proveedor.datasource" />
+    <None Include="Properties\DataSources\Simisoft.Buins.Usuario.datasource" />
     <None Include="Properties\DataSources\Simisoft.Buins.Venta.datasource" />
+    <None Include="Properties\DataSources\Simisoft.Buins.VentaDetalle.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

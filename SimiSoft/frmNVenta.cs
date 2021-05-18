@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraSplashScreen;
+using Simisoft.Buins;
 
 namespace SimiSoft
 {
@@ -15,6 +17,7 @@ namespace SimiSoft
     {
         public frmNVenta()
         {
+            SplashScreenManager.ShowDefaultWaitForm("Porfavor espere", "Inicianlizando nueva venta...");
             InitializeComponent();
         }
 
@@ -41,5 +44,13 @@ namespace SimiSoft
                 valuecase = true;
             }
         }
+
+        private void frmNVenta_Load(object sender, EventArgs e)
+        {
+            clienteBindingSource.DataSource = new Cliente().GetAll();
+        }
+
+
+
     }
 }
