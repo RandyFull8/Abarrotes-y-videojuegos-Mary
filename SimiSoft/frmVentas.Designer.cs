@@ -142,31 +142,35 @@ namespace SimiSoft
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl2.Location = new System.Drawing.Point(0, 0);
             this.barDockControl2.Manager = this.barManager1;
-            this.barDockControl2.Size = new System.Drawing.Size(798, 24);
+            this.barDockControl2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.barDockControl2.Size = new System.Drawing.Size(1596, 46);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 568);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1092);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(798, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1596, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 46);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 544);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1046);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(798, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1596, 46);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 544);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 1046);
             // 
             // bntModificar
             // 
@@ -184,11 +188,13 @@ namespace SimiSoft
             // 
             this.gcVentas.DataSource = this.ventaBindingSource;
             this.gcVentas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcVentas.Location = new System.Drawing.Point(0, 24);
+            this.gcVentas.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gcVentas.Location = new System.Drawing.Point(0, 46);
             this.gcVentas.MainView = this.gvVentas;
+            this.gcVentas.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.gcVentas.MenuManager = this.barManager1;
             this.gcVentas.Name = "gcVentas";
-            this.gcVentas.Size = new System.Drawing.Size(798, 544);
+            this.gcVentas.Size = new System.Drawing.Size(1596, 1046);
             this.gcVentas.TabIndex = 10;
             this.gcVentas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVentas});
@@ -206,6 +212,8 @@ namespace SimiSoft
             this.colcantidad,
             this.colimporte,
             this.colstatus});
+            this.gvVentas.DetailHeight = 673;
+            this.gvVentas.FixedLineWidth = 4;
             this.gvVentas.GridControl = this.gcVentas;
             this.gvVentas.Name = "gvVentas";
             this.gvVentas.OptionsBehavior.Editable = false;
@@ -218,25 +226,27 @@ namespace SimiSoft
             // 
             this.colidVenta.Caption = "ID";
             this.colidVenta.FieldName = "idVenta";
+            this.colidVenta.MinWidth = 40;
             this.colidVenta.Name = "colidVenta";
             this.colidVenta.OptionsColumn.AllowEdit = false;
             this.colidVenta.OptionsColumn.AllowFocus = false;
             this.colidVenta.OptionsColumn.AllowMove = false;
-            this.colidVenta.OptionsColumn.AllowSize = false;
             this.colidVenta.Visible = true;
             this.colidVenta.VisibleIndex = 0;
+            this.colidVenta.Width = 150;
             // 
             // colidCliente
             // 
             this.colidCliente.Caption = "Cliente";
             this.colidCliente.FieldName = "idCliente";
+            this.colidCliente.MinWidth = 40;
             this.colidCliente.Name = "colidCliente";
             this.colidCliente.OptionsColumn.AllowEdit = false;
             this.colidCliente.OptionsColumn.AllowFocus = false;
             this.colidCliente.OptionsColumn.AllowMove = false;
-            this.colidCliente.OptionsColumn.AllowSize = false;
             this.colidCliente.Visible = true;
             this.colidCliente.VisibleIndex = 1;
+            this.colidCliente.Width = 150;
             // 
             // colfecha
             // 
@@ -244,25 +254,27 @@ namespace SimiSoft
             this.colfecha.DisplayFormat.FormatString = "d";
             this.colfecha.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colfecha.FieldName = "fecha";
+            this.colfecha.MinWidth = 40;
             this.colfecha.Name = "colfecha";
             this.colfecha.OptionsColumn.AllowEdit = false;
             this.colfecha.OptionsColumn.AllowFocus = false;
             this.colfecha.OptionsColumn.AllowMove = false;
-            this.colfecha.OptionsColumn.AllowSize = false;
             this.colfecha.Visible = true;
             this.colfecha.VisibleIndex = 2;
+            this.colfecha.Width = 150;
             // 
             // colcantidad
             // 
             this.colcantidad.Caption = "Cantidad";
             this.colcantidad.FieldName = "cantidad";
+            this.colcantidad.MinWidth = 40;
             this.colcantidad.Name = "colcantidad";
             this.colcantidad.OptionsColumn.AllowEdit = false;
             this.colcantidad.OptionsColumn.AllowFocus = false;
             this.colcantidad.OptionsColumn.AllowMove = false;
-            this.colcantidad.OptionsColumn.AllowSize = false;
             this.colcantidad.Visible = true;
             this.colcantidad.VisibleIndex = 3;
+            this.colcantidad.Width = 150;
             // 
             // colimporte
             // 
@@ -270,30 +282,34 @@ namespace SimiSoft
             this.colimporte.DisplayFormat.FormatString = "c";
             this.colimporte.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colimporte.FieldName = "importe";
+            this.colimporte.MinWidth = 40;
             this.colimporte.Name = "colimporte";
             this.colimporte.OptionsColumn.AllowEdit = false;
             this.colimporte.OptionsColumn.AllowFocus = false;
             this.colimporte.OptionsColumn.AllowMove = false;
-            this.colimporte.OptionsColumn.AllowSize = false;
             this.colimporte.Visible = true;
             this.colimporte.VisibleIndex = 4;
+            this.colimporte.Width = 150;
             // 
             // colstatus
             // 
             this.colstatus.FieldName = "status";
+            this.colstatus.MinWidth = 40;
             this.colstatus.Name = "colstatus";
+            this.colstatus.Width = 150;
             // 
             // frmVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 568);
+            this.ClientSize = new System.Drawing.Size(1596, 1092);
             this.Controls.Add(this.gcVentas);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControl2);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmVentas.IconOptions.SvgImage")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmVentas";
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.frmVentas_Load);

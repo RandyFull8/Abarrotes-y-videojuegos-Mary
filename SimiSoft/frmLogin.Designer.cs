@@ -44,10 +44,9 @@ namespace SimiSoft
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(30, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 25);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
             // 
             // lblUsuario
@@ -59,20 +58,18 @@ namespace SimiSoft
             this.lblUsuario.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.lblUsuario.ImageOptions.Image = global::SimiSoft.Properties.Resources.icons8_gender_neutral_user_32;
             this.lblUsuario.LineColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(26, 33);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(6);
+            this.lblUsuario.Location = new System.Drawing.Point(13, 17);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(130, 36);
+            this.lblUsuario.Size = new System.Drawing.Size(83, 36);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario:";
             // 
             // txtUsuario
             // 
             this.txtUsuario.EditValue = "";
-            this.txtUsuario.Location = new System.Drawing.Point(254, 31);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6);
+            this.txtUsuario.Location = new System.Drawing.Point(127, 16);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(260, 40);
+            this.txtUsuario.Size = new System.Drawing.Size(130, 20);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.EditValueChanged += new System.EventHandler(this.txtUsuario_EditValueChanged);
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -81,11 +78,10 @@ namespace SimiSoft
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(254, 111);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6);
+            this.txtPassword.Location = new System.Drawing.Point(127, 67);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(260, 40);
+            this.txtPassword.Size = new System.Drawing.Size(130, 20);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
@@ -98,30 +94,27 @@ namespace SimiSoft
             this.lblPassword.Appearance.Options.UseForeColor = true;
             this.lblPassword.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.lblPassword.ImageOptions.Image = global::SimiSoft.Properties.Resources.icons8_password_32;
-            this.lblPassword.Location = new System.Drawing.Point(26, 113);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(6);
+            this.lblPassword.Location = new System.Drawing.Point(13, 59);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(171, 36);
+            this.lblPassword.Size = new System.Drawing.Size(105, 36);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Contraseña:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 127);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(30, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 3;
             // 
             // btnIngresar
             // 
             this.btnIngresar.Image = global::SimiSoft.Properties.Resources.icons8_ok_16;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(65, 225);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnIngresar.Location = new System.Drawing.Point(45, 119);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(180, 44);
+            this.btnIngresar.Size = new System.Drawing.Size(90, 23);
             this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -132,10 +125,9 @@ namespace SimiSoft
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Image = global::SimiSoft.Properties.Resources.icons8_cancel_16;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(309, 225);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCancelar.Location = new System.Drawing.Point(167, 119);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(180, 44);
+            this.btnCancelar.Size = new System.Drawing.Size(90, 23);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -149,12 +141,12 @@ namespace SimiSoft
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::SimiSoft.Properties.Resources.bgcontrol;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(554, 337);
+            this.ClientSize = new System.Drawing.Size(277, 175);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPassword);
@@ -165,7 +157,6 @@ namespace SimiSoft
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IconOptions.Image = global::SimiSoft.Properties.Resources.icons8_form_32;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";

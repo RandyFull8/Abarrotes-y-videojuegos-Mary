@@ -42,7 +42,7 @@ namespace SimiSoft
             ColumnView View = (ColumnView)gcProveedores.FocusedView;
             int rhFound = View.FocusedRowHandle;
             View.FocusedRowHandle = rhFound;
-            if (rhFound > 0)
+            if (rhFound >= 0)
             {
                 new frmNMProveedor((int)gvProveedores.GetFocusedRowCellValue("idProveedor"))
                 {
@@ -61,7 +61,7 @@ namespace SimiSoft
             ColumnView View = (ColumnView)gcProveedores.FocusedView;
             int rhFound = View.FocusedRowHandle;
             View.FocusedRowHandle = rhFound;
-            if (rhFound > 0)
+            if (rhFound >= 0)
             {
                 if (MessageBox.Show("¿Deseas eliminar el proveedor?", "Abarrotes y videojuejos Mary - 2021", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {

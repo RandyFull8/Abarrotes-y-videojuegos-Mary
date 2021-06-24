@@ -29,7 +29,7 @@ namespace SimiSoft
             {
                 idCliente = idCliente
             }.GetById();
-            txtId.Text = cliente.idCliente.ToString();
+            //txtId.Text = cliente.idCliente.ToString();
             txtNombre.Text = cliente.nombre;
             txtRazon.Text = cliente.razonSocial;
             txtTelefono.Text = cliente.telefono;
@@ -74,7 +74,7 @@ namespace SimiSoft
                     cliente.nombre = txtNombre.Text;
                     cliente.razonSocial = txtRazon.Text;
                     cliente.telefono = txtTelefono.Text;
-                    cliente.descuento = Convert.ToDecimal(txtDescuento.Text);
+                    cliente.descuento = Convert.ToDecimal(txtDescuento.EditValue);
                     if (cliente.Update() > 0)
                     {
                         XtraMessageBox.Show("Cliente modificado correctamente", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,

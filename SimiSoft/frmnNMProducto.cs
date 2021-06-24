@@ -29,13 +29,13 @@ namespace SimiSoft
             {
                 idProducto = idProducto
             }.GetById();
-            txtId.Text = producto.idProducto.ToString();
+            //txtId.Text = producto.idProducto.ToString();
             txtDescripcion.Text = producto.descripcion;
-            txtUnidad.Text = producto.unidadMedida;
+            cbUnidad.Text = producto.unidadMedida;
             txtCodigo.Text = producto.codigo;
             txtPrecio.Text = producto.precio.ToString();
             txtStock.Text = producto.stock.ToString();
-            txtMarca.Text = producto.marca;
+            cbMarca.Text = producto.marca;
 
         }
 
@@ -53,11 +53,13 @@ namespace SimiSoft
                     if (new Producto
                     {
                         descripcion = txtDescripcion.Text,
-                        unidadMedida = txtUnidad.Text,
+                        //unidadMedida = txtUnidad.Text,
+                        unidadMedida = (string)cbUnidad.EditValue,
                         codigo = txtCodigo.Text,
-                        precio = Convert.ToDecimal(txtPrecio.Text),
+                        //descuento = Convert.ToDecimal(txtDescuento.EditValue),
+                        precio = Convert.ToDecimal(txtPrecio.EditValue),
                         stock = Convert.ToInt32(txtStock.Text),
-                        marca = txtMarca.Text
+                        marca = (string)cbMarca.EditValue
                     }.Add() > 0)
                     {
                         XtraMessageBox.Show("Producto insertado correctamente", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
@@ -69,22 +71,23 @@ namespace SimiSoft
                     {
                         XtraMessageBox.Show("Ocurrio un error en la inserción", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
-                        mark2 = 2;
+                        
                         this.Close();
                     }
                 }
                 else
                 {
                     producto.descripcion = txtDescripcion.Text;
-                    producto.unidadMedida = txtUnidad.Text;
+                    producto.unidadMedida = cbUnidad.Text;
                     producto.codigo = txtCodigo.Text;
-                    producto.precio = Convert.ToDecimal(txtPrecio.Text);
+                    producto.precio = Convert.ToDecimal(txtPrecio.EditValue);
                     producto.stock = Convert.ToInt32(txtStock.Text);
-                    producto.marca = txtMarca.Text;
+                    producto.marca = cbMarca.Text;
                     if (producto.Update() > 0)
                     {
                         XtraMessageBox.Show("Producto modificado correctamente", "Abarrotes y videojuegos Mary", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        mark2 = 2;
                         this.Close();
                     }
                     else
@@ -111,12 +114,12 @@ namespace SimiSoft
                 txtDescripcion.Focus();
                 ban = true;
             }
-            if (string.IsNullOrEmpty(txtUnidad.Text))
+            if (string.IsNullOrEmpty(cbUnidad.Text))
             {
-                txtUnidad.ErrorText = "Ingresa una unidad";
+                cbUnidad.ErrorText = "Selecciona una unidad de medida";
                 if (ban == false)
                 {
-                    txtUnidad.Focus();
+                    cbUnidad.Focus();
                     ban = true;
                 }
             }
@@ -151,12 +154,12 @@ namespace SimiSoft
                 }
             }
 
-            if (string.IsNullOrEmpty(txtMarca.Text))
+            if (string.IsNullOrEmpty(cbMarca.Text))
             {
-                txtMarca.ErrorText = "Ingresa la marca";
+                cbMarca.ErrorText = "Selecciona una marca";
                 if (ban == false)
                 {
-                    txtMarca.Focus();
+                    cbMarca.Focus();
                     ban = true;
                 }
             }
@@ -252,6 +255,27 @@ namespace SimiSoft
                 if (dialogo2 == DialogResult.Yes) { }
                 else { e.Cancel = true; }
             }
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cbUnidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -48,7 +48,7 @@ namespace SimiSoft
             ColumnView View = (ColumnView)gcClientes.FocusedView;
             int rhFound = View.FocusedRowHandle;
             View.FocusedRowHandle = rhFound;
-            if (rhFound > 0)
+            if (rhFound >= 0)
             {
                 new frmNMCliente((int)gvClientes.GetFocusedRowCellValue("idCliente"))
                 {
@@ -66,7 +66,7 @@ namespace SimiSoft
             ColumnView View = (ColumnView)gcClientes.FocusedView;
             int rhFound = View.FocusedRowHandle;
             View.FocusedRowHandle = rhFound;
-            if (rhFound > 0)
+            if (rhFound >= 0)
             {
 
                 if (MessageBox.Show("¿Deseas eliminar el cliente?", "Abarrotes y videojuejos Mary - 2021", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)

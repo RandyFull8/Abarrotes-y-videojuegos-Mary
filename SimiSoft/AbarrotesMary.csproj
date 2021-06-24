@@ -228,6 +228,8 @@
     <None Include="Resources\icons8_client_16.png" />
     <None Include="Resources\icons8_nachos_16.png" />
     <None Include="Resources\icons8_supplier_16.png" />
+    <None Include="Resources\fondo-acuarela_87374-69.jpg" />
+    <None Include="Resources\blue-and-white-abstract-background-vector.jpg" />
     <Content Include="Resources\icons8_user_male_circle_64px_1.png" />
     <None Include="Resources\user_male_circle_64px.png" />
   </ItemGroup>

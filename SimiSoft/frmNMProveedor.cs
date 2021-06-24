@@ -29,7 +29,7 @@ namespace SimiSoft
             {
                 idProveedor = idProveedor
             }.GetById();
-            txtId.Text = proveedor.idProveedor.ToString();
+            //txtId.Text = proveedor.idProveedor.ToString();
             txtNombre.Text = proveedor.nombre;
             txtEmpresa.Text = proveedor.empresa;
             txtTelefono.Text = proveedor.telefono;

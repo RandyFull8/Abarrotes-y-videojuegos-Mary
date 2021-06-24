@@ -82,6 +82,7 @@ namespace SimiSoft
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnNuevo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnModificar, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEliminar, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar1.OptionsBar.DrawBorder = false;
             this.bar1.Text = "Herramientas";
             // 
             // btnActualizar
@@ -126,31 +127,35 @@ namespace SimiSoft
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(576, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.barDockControlTop.Size = new System.Drawing.Size(1152, 46);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 423);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 813);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(576, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1152, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 46);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 399);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 767);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(576, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1152, 46);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 399);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 767);
             // 
             // proveedorBindingSource
             // 
@@ -160,11 +165,13 @@ namespace SimiSoft
             // 
             this.gcProveedores.DataSource = this.proveedorBindingSource;
             this.gcProveedores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcProveedores.Location = new System.Drawing.Point(0, 24);
+            this.gcProveedores.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gcProveedores.Location = new System.Drawing.Point(0, 46);
             this.gcProveedores.MainView = this.gvProveedores;
+            this.gcProveedores.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.gcProveedores.MenuManager = this.barManager1;
             this.gcProveedores.Name = "gcProveedores";
-            this.gcProveedores.Size = new System.Drawing.Size(576, 399);
+            this.gcProveedores.Size = new System.Drawing.Size(1152, 767);
             this.gcProveedores.TabIndex = 14;
             this.gcProveedores.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProveedores});
@@ -177,6 +184,8 @@ namespace SimiSoft
             this.colempresa,
             this.coltelefono,
             this.colactivo});
+            this.gvProveedores.DetailHeight = 673;
+            this.gvProveedores.FixedLineWidth = 4;
             this.gvProveedores.GridControl = this.gcProveedores;
             this.gvProveedores.Name = "gvProveedores";
             this.gvProveedores.OptionsBehavior.Editable = false;
@@ -189,66 +198,73 @@ namespace SimiSoft
             // 
             this.colidProveedor.Caption = "ID";
             this.colidProveedor.FieldName = "idProveedor";
+            this.colidProveedor.MinWidth = 40;
             this.colidProveedor.Name = "colidProveedor";
             this.colidProveedor.OptionsColumn.AllowEdit = false;
             this.colidProveedor.OptionsColumn.AllowFocus = false;
             this.colidProveedor.OptionsColumn.AllowMove = false;
-            this.colidProveedor.OptionsColumn.AllowSize = false;
             this.colidProveedor.Visible = true;
             this.colidProveedor.VisibleIndex = 0;
+            this.colidProveedor.Width = 150;
             // 
             // colnombre
             // 
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
+            this.colnombre.MinWidth = 40;
             this.colnombre.Name = "colnombre";
             this.colnombre.OptionsColumn.AllowEdit = false;
             this.colnombre.OptionsColumn.AllowFocus = false;
             this.colnombre.OptionsColumn.AllowMove = false;
-            this.colnombre.OptionsColumn.AllowSize = false;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
+            this.colnombre.Width = 150;
             // 
             // colempresa
             // 
             this.colempresa.Caption = "Empresa";
             this.colempresa.FieldName = "empresa";
+            this.colempresa.MinWidth = 40;
             this.colempresa.Name = "colempresa";
             this.colempresa.OptionsColumn.AllowEdit = false;
             this.colempresa.OptionsColumn.AllowFocus = false;
             this.colempresa.OptionsColumn.AllowMove = false;
-            this.colempresa.OptionsColumn.AllowSize = false;
             this.colempresa.Visible = true;
             this.colempresa.VisibleIndex = 2;
+            this.colempresa.Width = 150;
             // 
             // coltelefono
             // 
             this.coltelefono.Caption = "Teléfono";
             this.coltelefono.FieldName = "telefono";
+            this.coltelefono.MinWidth = 40;
             this.coltelefono.Name = "coltelefono";
             this.coltelefono.OptionsColumn.AllowEdit = false;
             this.coltelefono.OptionsColumn.AllowFocus = false;
             this.coltelefono.OptionsColumn.AllowMove = false;
-            this.coltelefono.OptionsColumn.AllowSize = false;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 3;
+            this.coltelefono.Width = 150;
             // 
             // colactivo
             // 
             this.colactivo.FieldName = "activo";
+            this.colactivo.MinWidth = 40;
             this.colactivo.Name = "colactivo";
+            this.colactivo.Width = 150;
             // 
             // frmProveedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 423);
+            this.ClientSize = new System.Drawing.Size(1152, 813);
             this.Controls.Add(this.gcProveedores);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.IconOptions.Image = global::SimiSoft.Properties.Resources.icons8_supplier_16;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmProveedor";
             this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.frmProveedor_Load);

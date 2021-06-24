@@ -73,9 +73,29 @@ namespace SimiSoft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blue_and_white_abstract_background_vector {
+            get {
+                object obj = ResourceManager.GetObject("blue-and-white-abstract-background-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo {
             get {
                 object obj = ResourceManager.GetObject("fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_acuarela_87374_69 {
+            get {
+                object obj = ResourceManager.GetObject("fondo-acuarela_87374-69", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

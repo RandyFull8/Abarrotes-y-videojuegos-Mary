@@ -34,7 +34,7 @@ namespace SimiSoft
             ColumnView View = (ColumnView)gcProductos.FocusedView;
             int rhFound = View.FocusedRowHandle;
             View.FocusedRowHandle = rhFound;
-            if (rhFound > 0)
+            if (rhFound >= 0)
             {
                 new frmNMProducto((int)gvProductos.GetFocusedRowCellValue("idProducto"))
                 {
@@ -53,7 +53,7 @@ namespace SimiSoft
             ColumnView View = (ColumnView)gcProductos.FocusedView;
             int rhFound = View.FocusedRowHandle;
             View.FocusedRowHandle = rhFound;
-            if (rhFound > 0)
+            if (rhFound >= 0)
             {
                 if (MessageBox.Show("¿Deseas eliminar el producto?", "Abarrotes y videojuejos Mary - 2021", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
